@@ -1,0 +1,334 @@
+<html>
+  <head>
+    <title>Flight</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!--  jQuery -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.3.min.js"
+    ></script>
+
+    <!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://formden.com/static/cdn/bootstrap-iso.css"
+    />
+
+    <!-- Bootstrap Date-Picker Plugin -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css"
+    />
+
+    <style>
+      .footer {
+        margin:auto;
+        padding: 20px 0px 20px 0px;
+        background-color: #f68b8b
+        
+      }
+
+      .jumbotron {
+        background: url("6.jpg"); 
+        height: auto;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        /*for the white gap under the jumbotron*/
+      }
+      
+
+      .btn-primary {
+        color: #ffffff;
+        background-color: #f68b8b;
+        border-color: #ffffff;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        padding: 10px;
+      }
+
+      .navbar-dark {
+        background-color: #f68b8b;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-sm bg-pink navbar-dark">
+      <a class="navbar-brand" href="#"><h1>SANDY</h1> </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="index.html"
+            >&nbsp;
+            <h3>Home</h3></a
+          >
+          <a class="nav-link" href="index.html"
+            >&nbsp;
+            <h3>About</h3></a
+          >
+          <a class="nav-link" href="index.html"
+            >&nbsp;
+            <h3>Contact</h3></a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="row">
+        <div class="col-12 text-center">
+            <h1>Lets Travel the World</h1>
+            <h3>Happy Travelling!!!</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="new1 col-12 mt-1">
+            <form id="n1" action="index1.html" method="get">
+              <div class="form-group row">
+                <div class="col-md-2 col-12 text-center col-form-label">
+                  <h3><label for="firstname">From</label></h3>
+                </div>
+                <div class="col-md-6 col-12 text-center offset-md-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="from"
+                    name="from"
+                    placeholder="From"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group row mt-0">
+                <div class="col-md-2 col-12 text-center col-form-label">
+                  <h3><label for="firstname">Destination</label></h3>
+                </div>
+                <div class="col-md-6 col-12 text-center offset-md-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="to"
+                    name="to"
+                    placeholder="To"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group row mt-0">
+                <div class="col-md-2 col-12 text-center col-form-label">
+                  <h3><label for="firstname">Departure</label></h3>
+                </div>
+                <div class="col-md-6 col-12 text-center offset-md-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="dep"
+                    name="dep"
+                    placeholder="MM/DD/YYY"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group row mt-0">
+                <div class="col-md-2 col-12 text-center col-form-label">
+                  <h3><label for="firstname">Return</label></h3>
+                </div>
+                <div class="col-md-6 col-12 text-center offset-md-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="return"
+                    name="return"
+                    placeholder="MM/DD/YYY"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group row mt-0">
+                <div class="col-md-2 col-12 text-center col-form-label">
+                  <h3><label for="firstname">Passengers</label></h3>
+                </div>
+                <div class="col-md-6 col-12 text-center offset-md-2">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="eco"
+                    name="eco"
+                    placeholder="Number of passengers"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row ">
+                  <div class="col-12 text-center">
+                <button
+                  type="button"
+                  class="btn btn-primary btn-lg"
+                  onclick="myFunction();"
+                >
+                  Search Flights
+                </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="page-footer footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-3 offset-md-2">
+            <h5>Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html">About</a></li>
+              <li><a href="index.html">Menu</a></li>
+              <li><a href="index.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 offset-md-3">
+            <h5>Our Address</h5>
+            <address>
+              121, Clear Water Bay Road<br />
+              India<br />
+              <br />
+              <i class="fa fa-phone fa-lg"></i> +852 1234 5678<br />
+              <i class="fa fa-fax fa-lg"></i> +852 8765 4321<br />
+              <i class="fa fa-envelope fa-lg"></i>
+              <a href="mailto:confusion@food.net">sandy.com</a>
+            </address>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 align-self-center">
+            <div class="text-center">
+              <a
+                class="btn btn-social-icon btn-google"
+                href="http://google.com/+"
+                ><i class="fa fa-google-plus fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-linkedin"
+                href="http://www.facebook.com/profile.php?id="
+                ><i class="fa fa-facebook fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-linkedin"
+                href="http://www.linkedin.com/in/"
+                ><i class="fa fa-linkedin fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-twitter"
+                href="http://twitter.com/"
+                ><i class="fa fa-twitter fa-lg"></i
+              ></a>
+              <a
+                class="btn btn-social-icon btn-youtube"
+                href="http://youtube.com/"
+                ><i class="fa fa-youtube fa-lg"></i
+              ></a>
+              <a class="btn btn-social-icon" href="mailto:"
+                ><i class="fa fa-envelope-o fa-lg"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <p>© Copyright 2019 SANDY KKD</p>
+          </div>
+        </div>
+    </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    $(document).ready(function () {
+      var date_input = $('input[name="dep"]'); //our date input has the name "date"
+      var container =
+        $(".bootstrap-iso form").length > 0
+          ? $(".bootstrap-iso form").parent()
+          : "body";
+      var options = {
+        format: "mm/dd/yyyy",
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    });
+    $(document).ready(function () {
+      var date_input = $('input[name="return"]'); //our date input has the name "date"
+      var container =
+        $(".bootstrap-iso form").length > 0
+          ? $(".bootstrap-iso form").parent()
+          : "body";
+      var options = {
+        format: "mm/dd/yyyy",
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    });
+
+    function myFunction() {
+      var x = document.forms["n1"]["from"].value;
+      var x1 = document.forms["n1"]["to"].value;
+      var x2 = document.forms["n1"]["dep"].value;
+      var x3 = document.forms["n1"]["return"].value;
+      var x4 = document.forms["n1"]["eco"].value;
+      if (x == "" || x1 == "" || x2 == "" || x3 == "" || x4 == "") {
+        alert("Enter required fields");
+        return false;
+      }
+
+      var inputTest = document.getElementById("from").value;
+      var inputTest1 = document.getElementById("to").value;
+      var inputTest2 = document.getElementById("dep").value;
+      var inputTest3 = document.getElementById("return").value;
+      var inputTest4 = document.getElementById("eco").value;
+      localStorage.setItem("objectToPass", inputTest);
+      localStorage.setItem("objectToPass1", inputTest1);
+      localStorage.setItem("objectToPass2", inputTest2);
+      localStorage.setItem("objectToPass3", inputTest3);
+      localStorage.setItem("objectToPass4", inputTest4);
+      document.getElementById("n1").submit();
+    }
+  </script>
+</html>

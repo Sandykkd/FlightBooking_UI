@@ -1,0 +1,606 @@
+<html>
+
+<head>
+        <title>Flight</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!--  jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+    <!-- Bootstrap Date-Picker Plugin -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
+
+    <style>
+        .footer {
+        margin:auto;
+        padding: 20px 0px 20px 0px;
+        background-color: #f68b8b
+        
+      }
+        .jumbotron {
+            background-color: #f68b8b;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /*for the white gap under the jumbotron*/
+
+        }
+
+        .btn-primary {
+            color: #ffffff;
+            background-color: #f68b8b;
+            border-color: #ffffff;
+            font-weight: bold;
+            letter-spacing: 0.10em;
+            padding: 10px;
+        }
+
+        #from1,
+        #to1,
+        #dep1,
+        #return1,
+        #eco1 {
+            border-radius: 25px;
+        }
+        
+        .navbar-dark {
+            background-color: #f68b8b;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-pink navbar-dark">
+        <a class="navbar-brand" href="#"><h1>SANDY</h1> </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="index.html"
+              >&nbsp;
+              <h3>Home</h3></a
+            >
+            <a class="nav-link" href="index.html"
+              >&nbsp;
+              <h3>About</h3></a
+            >
+            <a class="nav-link" href="index.html"
+              >&nbsp;
+              <h3>Contact</h3></a
+            >
+          </div>
+        </div>
+      </nav>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid">
+                    <div class="form-group row">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-12 col-form-label">
+                                        <h4><label for="firstname">From</label></h4>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-12">
+                                        <input type="text" class="form-control" id="from1"  placeholder="From">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="row">
+                                    <div class="col-lg-5 col-md-5 col-12 col-form-label">
+                                        <h4><label for="firstname">Destination</label></h4>
+                                    </div>
+                                    <div class="col-lg-7 col-md-7 col-12">
+                                        <input type="text" class="form-control" id="to1" placeholder="To">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-12 ">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-12 col-form-label">
+                                        <h4><label for="firstname">Departure</label></h4>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-12">
+                                        <input type="text" class="form-control" id="dep1" name="dep1" placeholder="MM/DD/YYY"/>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-12 col-form-label">
+                                            <h4><label for="firstname">Return</label></h4>
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-12">
+                                            <input type="text" class="form-control" id="return1" name="return1" placeholder="MM/DD/YYY"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-12 col-form-label">
+                                            <h4><label for="firstname">Traveller's Economy</label></h4>
+                                        </div>
+                                        <div class="col-lg-8 col-md-8 col-12">
+                                            <input type="number" class="form-control" id="eco1" name="eco1" placeholder="Number of passengers"/>
+                                        </div> 
+                                    </div>
+                                </div>
+                    </div>  
+                </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <button type="button" class="btn btn-primary"
+                            id="search" onclick="location.reload();">Search
+                            Flights
+                            </button>
+                        </div>
+                   </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5 offset-md-1 text-center" style="background-color:#f68b8b;border-radius: 15px;">
+                <div class="col-md-12">
+                    <div class="row">
+                        <h3 class="col-md-3 offset-md-1">Departure</h3>
+                        <h3 class="col-md-3">Duration</h3>
+                        <h3 class="col-md-3">Arrival</h3>
+                        <h3 class="col-md-2">Price</h3>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-md-5 ml-md-2 text-center" style="background-color:#f68b8b;border-radius: 15px;">
+                <div class="col-md-12">
+                    <div class="row">
+                        <h3 class="col-md-3 offset-md-1">Departure</h3>
+                        <h3 class="col-md-3">Duration</h3>
+                        <h3 class="col-md-3">Arrival</h3>
+                        <h3 class="col-md-2">Price</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div><br>
+
+
+
+        <div class="row">
+            <div class="col-sm-6 col-md-5 offset-md-1"
+                style="background-color:#f68b8b;border-radius: 15px;">
+                <form action="index2.html" method="get">
+                    <div class="row text-center">
+                            <div class="col-lg-1 col-md-1 col-12 "><br>
+                                <span class="badge badge-danger" style="width:50px;height:18px">DEALS</span>
+                                <br><br><img src="img1.jpg" style="width:50px;height:50px" ;><br>
+    
+                                <h5 class="text-light">Indigo</h5>
+                            </div>
+                            <div class="col-lg-3 col-md-3 ml-4 col-12"><br>
+                                <h3>Tue Dec 10</h3>
+                                <h5 class="text-light">CJB</h5>
+                                <h3>21:20</h3>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-12 "><br>
+                                <h3>9h 05m</h3>
+                                <h3>1 Stop</h3>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-12"><br>
+                                <h5 class="text-light">COK+1D</h5>
+                                <h3>06:25</h3>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12 offset-md-1 mr-md-3"><br>
+                                <i class="fa fa-inr" style="font-size:30px">10,265</i><br><br><br>
+                                <button type="submit" class="btn btn-dark btn-lg">
+                                    <h4>Book</h4>
+                                </button>
+                            </div>
+
+                            
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-6 col-md-5 ml-md-2 mt-lg-0 mt-4" style="background-color:#f68b8b;border-radius: 15px;">
+
+                <form action="index2.html" method="get">
+                    <div class="row text-center">
+                            <div class="col-lg-1 col-md-1 col-12 "><br>
+                                <span class="badge badge-danger" style="width:50px;height:18px">DEALS</span>
+                                <br><br><img src="img2.jpg" style="width:50px;height:50px" ;><br>
+    
+                                <h5 class="text-light">Indigo</h5>
+                            </div>
+                            <div class="col-lg-3 col-md-3 ml-4 col-12"><br>
+                                <h3>Tue Dec 10</h3>
+                                <h5 class="text-light">CJB</h5>
+                                <h3>21:20</h3>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-12 "><br>
+                                <h3>9h 05m</h3>
+                                <h3>1 Stop</h3>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-12"><br>
+                                <h5 class="text-light">COK+1D</h5>
+                                <h3>06:25</h3>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12 offset-md-1 mr-md-3"><br>
+                                <i class="fa fa-inr" style="font-size:30px">10,265</i><br><br><br>
+                                <button type="submit" class="btn btn-dark btn-lg">
+                                    <h4>Book</h4>
+                                </button>
+                            </div>
+
+                            
+                    </div>
+                </form>
+            </div>
+        </div><br>    
+</div>
+<div class="container-fluid">
+<div class="row text-center">
+        <div class="col-sm-6 col-md-5 offset-md-1"
+        style="background-color:#f68b8b;border-radius: 15px;">
+        <form action="index2.html" method="get">
+            <div class="row text-center">
+                    <div class="col-lg-1 col-md-1 col-12 "><br>
+                        <span class="badge badge-danger" style="width:50px;height:18px">DEALS</span>
+                        <br><br><img src="img3.png" style="width:50px;height:50px" ;><br>
+
+                        <h5 class="text-light">Indigo</h5>
+                    </div>
+                    <div class="col-lg-3 col-md-3 ml-4 col-12"><br>
+                        <h3>Tue Dec 10</h3>
+                        <h5 class="text-light">CJB</h5>
+                        <h3>21:20</h3>
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-12 "><br>
+                        <h3>9h 05m</h3>
+                        <h3>1 Stop</h3>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-12"><br>
+                        <h5 class="text-light">COK+1D</h5>
+                        <h3>06:25</h3>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-12 offset-md-1 mr-md-3"><br>
+                        <i class="fa fa-inr" style="font-size:30px">10,265</i><br><br><br>
+                        <button type="submit" class="btn btn-dark btn-lg">
+                            <h4>Book</h4>
+                        </button>
+                    </div>
+
+                    
+            </div>
+        </form>
+    </div>
+        <div class="col-sm-6 col-md-5 ml-md-2 mt-lg-0 mt-4" style="background-color:#f68b8b;border-radius: 15px;">
+
+            <form action="index2.html" method="get">
+                <div class="row text-center">
+                        <div class="col-lg-1 col-md-1 col-12 "><br>
+                            <span class="badge badge-danger" style="width:50px;height:18px">DEALS</span>
+                            <br><br><img src="img4.png" style="width:50px;height:50px" ;><br>
+
+                            <h5 class="text-light">Indigo</h5>
+                        </div>
+                        <div class="col-lg-3 col-md-3 ml-4 col-12"><br>
+                            <h3>Tue Dec 10</h3>
+                            <h5 class="text-light">CJB</h5>
+                            <h3>21:20</h3>
+                        </div>
+
+                        <div class="col-lg-2 col-md-2 col-12 "><br>
+                            <h3>9h 05m</h3>
+                            <h3>1 Stop</h3>
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-12"><br>
+                            <h5 class="text-light">COK+1D</h5>
+                            <h3>06:25</h3>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-12 offset-md-1 mr-md-3"><br>
+                            <i class="fa fa-inr" style="font-size:30px">10,265</i><br><br><br>
+                            <button type="submit" class="btn btn-dark btn-lg">
+                                <h4>Book</h4>
+                            </button>
+                        </div>
+
+                        
+                </div>
+            </form>
+            </div>
+      </div>
+
+    </div><br>
+
+    <div class="container-fluid">
+            <div class="row text-center">
+                    <div class="col-sm-6 col-md-5 offset-md-1"
+                    style="background-color:#f68b8b;border-radius: 15px;">
+                    <form action="index2.html" method="get">
+                        <div class="row text-center">
+                                <div class="col-lg-1 col-md-1 col-12 "><br>
+                                    <span class="badge badge-danger" style="width:50px;height:18px">DEALS</span>
+                                    <br><br><img src="img5.jpg" style="width:50px;height:50px" ;><br>
+        
+                                    <h5 class="text-light">Indigo</h5>
+                                </div>
+                                <div class="col-lg-3 col-md-3 ml-4 col-12"><br>
+                                    <h3>Tue Dec 10</h3>
+                                    <h5 class="text-light">CJB</h5>
+                                    <h3>21:20</h3>
+                                </div>
+    
+                                <div class="col-lg-2 col-md-2 col-12 "><br>
+                                    <h3>9h 05m</h3>
+                                    <h3>1 Stop</h3>
+                                </div>
+                                <div class="col-lg-1 col-md-1 col-12"><br>
+                                    <h5 class="text-light">COK+1D</h5>
+                                    <h3>06:25</h3>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-12 offset-md-1 mr-md-3"><br>
+                                    <i class="fa fa-inr" style="font-size:30px">10,265</i><br><br><br>
+                                    <button type="submit" class="btn btn-dark btn-lg">
+                                        <h4>Book</h4>
+                                    </button>
+                                </div>
+    
+                                
+                        </div>
+                    </form>
+                </div>
+                    <div class="col-sm-6 col-md-5 ml-md-2 mt-lg-0 mt-4" style="background-color:#f68b8b;border-radius: 15px;">
+            
+                        <form action="index2.html" method="get">
+                            <div class="row text-center">
+                                    <div class="col-lg-1 col-md-1 col-12 "><br>
+                                        <span class="badge badge-danger" style="width:50px;height:18px">DEALS</span>
+                                        <br><br><img src="img1.jpg" style="width:50px;height:50px" ;><br>
+            
+                                        <h5 class="text-light">Indigo</h5>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 ml-4 col-12"><br>
+                                        <h3>Tue Dec 10</h3>
+                                        <h5 class="text-light">CJB</h5>
+                                        <h3>21:20</h3>
+                                    </div>
+        
+                                    <div class="col-lg-2 col-md-2 col-12 "><br>
+                                        <h3>9h 05m</h3>
+                                        <h3>1 Stop</h3>
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-12"><br>
+                                        <h5 class="text-light">COK+1D</h5>
+                                        <h3>06:25</h3>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-12 offset-md-1 mr-md-3"><br>
+                                        <i class="fa fa-inr" style="font-size:30px">10,265</i><br><br><br>
+                                        <button type="submit" class="btn btn-dark btn-lg">
+                                            <h4>Book</h4>
+                                        </button>
+                                    </div>
+        
+                                    
+                            </div>
+                        </form>
+                        </div>
+                  </div>
+            
+                </div><br>
+
+                <div class="container-fluid">
+                        <div class="row text-center">
+                                <div class="col-sm-6 col-md-5 offset-md-1"
+                                style="background-color:#f68b8b;border-radius: 15px;">
+                                <form action="index2.html" method="get">
+                                    <div class="row text-center">
+                                            <div class="col-lg-1 col-md-1 col-12 "><br>
+                                                <span class="badge badge-danger" style="width:50px;height:18px">DEALS</span>
+                                                <br><br><img src="img1.jpg" style="width:50px;height:50px" ;><br>
+                    
+                                                <h5 class="text-light">Indigo</h5>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 ml-4 col-12"><br>
+                                                <h3>Tue Dec 10</h3>
+                                                <h5 class="text-light">CJB</h5>
+                                                <h3>21:20</h3>
+                                            </div>
+                
+                                            <div class="col-lg-2 col-md-2 col-12 "><br>
+                                                <h3>9h 05m</h3>
+                                                <h3>1 Stop</h3>
+                                            </div>
+                                            <div class="col-lg-1 col-md-1 col-12"><br>
+                                                <h5 class="text-light">COK+1D</h5>
+                                                <h3>06:25</h3>
+                                            </div>
+                                            <div class="col-lg-3 col-md-3 col-12 offset-md-1 mr-md-3"><br>
+                                                <i class="fa fa-inr" style="font-size:30px">10,265</i><br><br><br>
+                                                <button type="submit" class="btn btn-dark btn-lg">
+                                                    <h4>Book</h4>
+                                                </button>
+                                            </div>
+                
+                                            
+                                    </div>
+                                </form>
+                            </div>
+                                <div class="col-sm-6 col-md-5 ml-md-2 mt-lg-0 mt-4" style="background-color:#f68b8b;border-radius: 15px;">
+                        
+                                    <form action="index2.html" method="get">
+                                        <div class="row text-center">
+                                                <div class="col-lg-1 col-md-1 col-12 "><br>
+                                                    <span class="badge badge-danger" style="width:50px;height:18px">DEALS</span>
+                                                    <br><br><img src="img1.jpg" style="width:50px;height:50px" ;><br>
+                        
+                                                    <h5 class="text-light">Indigo</h5>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 ml-4 col-12"><br>
+                                                    <h3>Tue Dec 10</h3>
+                                                    <h5 class="text-light">CJB</h5>
+                                                    <h3>21:20</h3>
+                                                </div>
+                    
+                                                <div class="col-lg-2 col-md-2 col-12 "><br>
+                                                    <h3>9h 05m</h3>
+                                                    <h3>1 Stop</h3>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-12"><br>
+                                                    <h5 class="text-light">COK+1D</h5>
+                                                    <h3>06:25</h3>
+                                                </div>
+                                                <div class="col-lg-3 col-md-3 col-12 offset-md-1 mr-md-3"><br>
+                                                    <i class="fa fa-inr" style="font-size:30px">10,265</i><br><br><br>
+                                                    <button type="submit" class="btn btn-dark btn-lg">
+                                                        <h4>Book</h4>
+                                                    </button>
+                                                </div>
+                    
+                                                
+                                        </div>
+                                    </form>
+                                    </div>
+                              </div>
+                        
+                            </div><br>
+                        
+
+                            <footer class="page-footer footer container-fluid">
+                                <div class="container">
+                                  <div class="row">
+                                    <div class="col-6 col-md-3 offset-md-2">
+                                      <h5>Links</h5>
+                                      <ul class="list-unstyled">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="index.html">About</a></li>
+                                        <li><a href="index.html">Menu</a></li>
+                                        <li><a href="index.html">Contact</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-6 col-md-3 offset-md-3">
+                                      <h5>Our Address</h5>
+                                      <address>
+                                        121, Clear Water Bay Road<br />
+                                        India<br />
+                                        <br />
+                                        <i class="fa fa-phone fa-lg"></i> +852 1234 5678<br />
+                                        <i class="fa fa-fax fa-lg"></i> +852 8765 4321<br />
+                                        <i class="fa fa-envelope fa-lg"></i>
+                                        <a href="mailto:confusion@food.net">sandy.com</a>
+                                      </address>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-12 align-self-center">
+                                      <div class="text-center">
+                                        <a
+                                          class="btn btn-social-icon btn-google"
+                                          href="http://google.com/+"
+                                          ><i class="fa fa-google-plus fa-lg"></i
+                                        ></a>
+                                        <a
+                                          class="btn btn-social-icon btn-linkedin"
+                                          href="http://www.facebook.com/profile.php?id="
+                                          ><i class="fa fa-facebook fa-lg"></i
+                                        ></a>
+                                        <a
+                                          class="btn btn-social-icon btn-linkedin"
+                                          href="http://www.linkedin.com/in/"
+                                          ><i class="fa fa-linkedin fa-lg"></i
+                                        ></a>
+                                        <a
+                                          class="btn btn-social-icon btn-twitter"
+                                          href="http://twitter.com/"
+                                          ><i class="fa fa-twitter fa-lg"></i
+                                        ></a>
+                                        <a
+                                          class="btn btn-social-icon btn-youtube"
+                                          href="http://youtube.com/"
+                                          ><i class="fa fa-youtube fa-lg"></i
+                                        ></a>
+                                        <a class="btn btn-social-icon" href="mailto:"
+                                          ><i class="fa fa-envelope-o fa-lg"></i
+                                        ></a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row justify-content-center">
+                                    <div class="col-auto">
+                                      <p>© Copyright 2019 SANDY KKD</p>
+                                    </div>
+                                  </div>
+                              </div>
+                                </div>
+                              </footer>
+</body>
+<script>
+    $(document).ready(function () {
+        var date_input = $('input[name="date"]'); //our date input has the name "date"
+        var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+        var options = {
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        };
+        date_input.datepicker(options);
+    });
+    $(document).ready(function () {
+        var date_input = $('input[name="date1"]'); //our date input has the name "date"
+        var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+        var options = {
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        };
+        date_input.datepicker(options);
+    });
+
+    var inputTest = localStorage.getItem('objectToPass');
+    var inputTest1 = localStorage.getItem('objectToPass1');
+    var inputTest2 = localStorage.getItem('objectToPass2');
+    var inputTest3 = localStorage.getItem('objectToPass3');
+    var inputTest4 = localStorage.getItem('objectToPass4');
+
+    document.getElementById("from1").value = inputTest || Salem;
+    document.getElementById("to1").value = inputTest1 || Chennai;
+    document.getElementById("dep1").value = inputTest2 || 09/12/1222;
+    document.getElementById("return1").value = inputTest3 || 12/12/1222;
+    document.getElementById("eco1").value = inputTest4 || 3;
+    localStorage.removeItem('objectToPass1'); // Clear the localStorage
+    localStorage.removeItem('objectToPass'); // Clear the localStorage
+    localStorage.removeItem('objectToPass3'); // Clear the localStorage
+    localStorage.removeItem('objectToPass4'); // Clear the localStorage
+    localStorage.removeItem('objectToPass5'); // Clear the localStorage
+
+
+</script>
+
+</html>
